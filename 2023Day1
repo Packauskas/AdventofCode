@@ -1,0 +1,40 @@
+
+file = open(r"Day1a.txt", "r")
+
+charizard = file.readlines()
+
+numList = []
+for line in charizard:
+    length = len(line)
+    chars = []
+    print(line)
+    for i in range(0,length):
+        if line[i:].startswith("one") or line[i:].startswith("1"):
+            chars.append("1")
+        elif line[i:].startswith("two") or line[i:].startswith("2"):
+            chars.append("2")
+        elif line[i:].startswith("three") or line[i:].startswith("3"):
+            chars.append("3")
+        elif line[i:].startswith("four") or line[i:].startswith("4"):
+            chars.append("4")
+        elif line[i:].startswith("five") or line[i:].startswith("5"):
+            chars.append("5")
+        elif line[i:].startswith("six") or line[i:].startswith("6"):
+            chars.append("6")
+        elif line[i:].startswith("seven") or line[i:].startswith("7"):
+            chars.append("7")
+        elif line[i:].startswith("eight") or line[i:].startswith("8"):
+            chars.append("8")
+        elif line[i:].startswith("nine") or line[i:].startswith("9"):
+            chars.append("9")
+        elif line[i:].startswith("zero") or line[i:].startswith("0"):
+            chars.append("0")
+    numList.append(chars[0] + chars[-1])
+    print(chars)
+print(numList)
+
+sum = 0
+for x in numList:
+    sum += int(x)
+print(sum)
+            
